@@ -17,6 +17,7 @@
             <li><a href="cms.php?parentId=275&groupType=Other&open">Important Links</a></li>
             <li><a href="cms.php?id=176&parentId=0&groupType=Other">Introduction</a></li>
             <li><a href="cms.php?id=274&parentId=0&groupType=Other">Message From Program Chief</a></li>
+            <li><a href="cms.php?id=427&parentId=0&groupType=Other">Information Officer</a></li>
             <li><a href="feedbacks.php">View Feedbacks</a></li>
             <!--<li><a href="enewsletters.php">View Suscribes</a></li>-->
             <li><a href="bills.php">Manage Bills</a></li>

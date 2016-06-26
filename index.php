@@ -7,7 +7,7 @@
 	<?php if($pageName!=""){ echo $pageName;}else if(isset($_GET['action'])){ echo $_GET['action'];}else{ echo "Home";}?>
 </title>
 <? include('baselocation.php'); ?>
-<meta name="description" content="Market Research and Stastistics Management Programme" />
+<meta name="description" content="District Agriculture Development Office, Gulmi" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" media="screen,projection,print" href="css/layout4_setup.css" />
 <link rel="stylesheet" type="text/css" media="screen,projection,print" href="css/layout4_text.css" />
@@ -51,7 +51,17 @@
     <!-- B.1 MAIN NAVIGATION -->
     <div class="main-navigation">
       <!-- Navigation Level 3 -->
-      <div class="round-border-topright"></div>
+      <? $msg=$groups->getById(274); $msgGet=$conn->fetchArray($msg); ?>
+      <h1 style="margin:0px 0 20px 0"><?=$msgGet['name'];?></h1>
+      <img src="<?=CMS_GROUPS_DIR.$msgGet['image'];?>" width="167" style="margin:0px 7px 7px 14px" />
+      <p style="text-align:justify"><?=$msgGet['shortcontents'];?>...<br />
+      <a style="float:right" href="<?=$msgGet['urlname'];?>">more...</a></p>
+
+      <? $msg=$groups->getById(INFORMATION_OFFICER); $msgGet=$conn->fetchArray($msg); ?>
+      <h1 style="margin:0px 0 20px 0"><?=$msgGet['name'];?></h1>
+      <img src="<?=CMS_GROUPS_DIR.$msgGet['image'];?>" width="167" style="margin:0px 7px 7px 14px" />
+      <p style="text-align:justify"><?=$msgGet['shortcontents'];?>...<br />
+      <a style="float:right" href="<?=$msgGet['urlname'];?>">more...</a></p>
       
       <h1 class="first">Information Categories</h1>
       <!-- Navigation with grid style -->
@@ -72,13 +82,6 @@
    			<li><a href="<?=$linksGet['contents'];?>" target="_blank"><?=$linksGet['name'];?></a></li>
         <? }?>
       </ul>
- 		
-        
-      <? $msg=$groups->getById(274); $msgGet=$conn->fetchArray($msg); ?>
-      <h1><?=$msgGet['name'];?></h1>
-      <img src="<?=CMS_GROUPS_DIR.$msgGet['image'];?>" width="167" style="margin:0px 7px 7px 14px" />
-      <p style="text-align:justify"><?=substr($msgGet['shortcontents'],0,180);?>...<br />
-      <a style="float:right" href="<?=$msgGet['urlname'];?>">more...</a></p>
       
       <div style="background:#669933;height:52px;padding:9px 0 0;text-align:center;width:200px;;">
      	  <p><a href="bills.html" style="color:white; text-align:center; font-size:16px; font-weight:bold; line-height:1.4">भुक्तानीका लागि प्राप्त विलहरुको सार्वजनिकरण</a></p>
