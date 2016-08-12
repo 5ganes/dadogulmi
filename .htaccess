@@ -6,6 +6,8 @@ RewriteEngine On
 # live
 # RewriteBase /
 
+RewriteRule ^important-links index.php?action=important_links [L]
+RewriteRule ^information-categories index.php?action=information_categories [L]
 
 RewriteRule ^cart/remove/([0-9]+)$ index.php?action=cart&removeId=$1 [L]
 RewriteRule ^cart/([0-9]+)$ index.php?action=cart&productId=$1 [L]

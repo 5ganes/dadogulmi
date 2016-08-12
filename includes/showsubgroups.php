@@ -1,5 +1,5 @@
 <style>
-	.download{width:650px;}
+	.download{width:430px;}
 	.download ul{ margin:0;}
 	.download ul li{ list-style:none;}
 </style>	
@@ -12,18 +12,18 @@ $pagename = "index.php?id=". $pageId ."&";
 include("includes/pagination.php");
 
 echo Pagination($pageContents, "content");?>
-<br />
+<br /><br>
 <?
 	if($pageId==338 or $pageId==341)
 	{
-		echo '<div class="download"><ul>';
+		echo '<div class="download"><h3>प्रकाशनहरु डाउनलोड गर्नुहोस</h3></<ul>';
 		$down=$groups->getByParentId($pageId);
 		while($downRow=$conn->fetchArray($down))
 		{?>
 			<li>
-            	<div style="float: left;width: 500px;"><?=$downRow['name'];?></div>
+            	<div style="float: left;width: 330px;"><?=$downRow['name'];?></div>
             	<div style="float:right;">
-                	<a href="<?=CMS_FILES_DIR.$downRow['contents'];?>"><img src="img/pdf.png" width="30" /></a>
+                	<a href="<?=CMS_FILES_DIR.$downRow['contents'];?>"><img src="img/pdf.png" width="23" /></a>
              	</div>
             	<div style="clear:both"></div>
 			</li>

@@ -42,12 +42,12 @@
       <div class="column1-unit">
         <h1 style="font-size:190%">सुचना तथा समाचार</h1>
         <ul>
-        	<? $news=$groups->getByParentIdWithLimit(321,20);
-			while($newsGet=$conn->fetchArray($news))
-			{?>
+        	<? $news=$groups->getByParentIdWithLimit(NEWS,4);
+			    while($newsGet=$conn->fetchArray($news))
+			    {?>
             	<li><a href="<?=$newsGet['urlname'];?>"><?=$newsGet['name'];?></a></li>
         	<? }?>
-        	
+        	<li><a style="font-weight:bold; font-size:13px; margin-top:10px" href="<?=$url['urlname'];?>">see more...</a></li>
      	</ul>
       </div>
       <hr class="clear-contentunit" />

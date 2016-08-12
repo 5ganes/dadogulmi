@@ -25,12 +25,16 @@ define("LISTING_LIMIT", 6); // IMAGE AND VIDEO GALLERY LIMIT FOR CLIENT
 
 define("SLIDER", 8);
 define("WELCOME", 1);	
-define("INFORMATION_OFFICER",427);
+define("INFORMATION_OFFICER",437);
 define("CONTACT", 234);
 
 define("TRAINING",3);
 define("NURSERY", 5);
 define("PROGRAMPROGRESS", 7);
+
+define("IMPORTANT_LINKS", 275);
+define("INFORMATION_CATEGORY", 241);
+define("NEWS", 321);
 
 ///////////////GENERAL CLIENT SIDE CONSTANTS///////////////////
 

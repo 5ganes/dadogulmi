@@ -63,25 +63,31 @@
       <p style="text-align:justify"><?=$msgGet['shortcontents'];?>...<br />
       <a style="float:right" href="<?=$msgGet['urlname'];?>">more...</a></p>
       
-      <h1 class="first">Information Categories</h1>
+      <? $url=$groups->getById(INFORMATION_CATEGORY); $url=$conn->fetchArray($url);?>
+      <h1 class="first"><?=$url['name'];?></h1>
       <!-- Navigation with grid style -->
       <dl class="nav3-grid">
-      	<? $info=$groups->getByParentIdWithLimit(241,20);
+      	<? $info=$groups->getByParentIdWithLimit(241,4);
 		while($infoGet=$conn->fetchArray($info))
 		{?>
         	<dt> <a href="<?=$infoGet['urlname'];?>"><?=$infoGet['name'];?></a></dt>
       	<? }?>
       </dl>
+      <a style="float:right; font-weight:bold; font-size:13px; margin-top:10px" href="<?=$url['urlname'];?>">see more...</a>
+      <div style="clear:both"></div>
       
       <!-- Template infos -->
-      <h1>Important Links</h1>
-      <ul style="margin:0 5px 0 6px">
-      	<? $links=$groups->getByParentIdWithLimit(275, 10);
+      <? $url=$groups->getById(IMPORTANT_LINKS); $url=$conn->fetchArray($url);?>
+      <h1><?=$url['name'];?></h1>
+      <dl class="nav3-grid">
+      	<? $links=$groups->getByParentIdWithLimit(275, 4);
 		while($linksGet=$conn->fetchArray($links))
 		{?>
-   			<li><a href="<?=$linksGet['contents'];?>" target="_blank"><?=$linksGet['name'];?></a></li>
+   			<dt><a href="<?=$linksGet['contents'];?>" target="_blank"><?=$linksGet['name'];?></a></dt>
         <? }?>
-      </ul>
+      </dl>
+      <a style="float:right; font-weight:bold; font-size:13px; margin-top:10px" href="<?=$url['urlname'];?>">see more...</a>
+      <div style="clear:both"></div><br>
       
       <div style="background:#669933;height:52px;padding:9px 0 0;text-align:center;width:200px;;">
      	  <p><a href="bills.html" style="color:white; text-align:center; font-size:16px; font-weight:bold; line-height:1.4">भुक्तानीका लागि प्राप्त विलहरुको सार्वजनिकरण</a></p>
@@ -89,7 +95,7 @@
     
     </div>
     
-    <div class="dynamic" style="font-size:12px; line-height:1.5">
+    <div class="dynamic" style="font-size:12px; line-height:1.8">
     	
         <?php 
 			if(isset($_GET['action']))
