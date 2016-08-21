@@ -2,7 +2,7 @@
 <div id="uploadVideoHolder">
   <div style="">Link : <strong>[eg. http://www.youtube.com/watch?v=1425WRE54]</strong></div>
   <div style="float:left; padding-bottom:5px;">
-    <textarea name="videoUrl[]" rows="4" cols="110"></textarea>
+    <textarea name="videoUrl[]" rows="4" cols="100"></textarea>
   </div>
   <hr style="clear: both;">
 </div>
