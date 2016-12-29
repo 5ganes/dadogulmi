@@ -1,0 +1,2 @@
+[03-Jul-2016 05:21:48 UTC] PHP Warning:  copy(): Filename cannot be empty in /home/dadogulmigov/public_html/admin/manage_cms.php on line 33
+[03-Jul-2016 05:21:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dadogulmigov/public_html/admin/manage_cms.php:33) in /home/dadogulmigov/public_html/admin/manage_cms.php on line 231

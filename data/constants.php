@@ -25,7 +25,7 @@ define("LISTING_LIMIT", 6); // IMAGE AND VIDEO GALLERY LIMIT FOR CLIENT
 
 define("SLIDER", 8);
 define("WELCOME", 1);	
-define("INFORMATION_OFFICER",427);
+define("INFORMATION_OFFICER",437);
 define("CONTACT", 234);
 
 define("TRAINING",3);
